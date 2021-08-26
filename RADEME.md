@@ -6,6 +6,7 @@ notes:
 first upload of invoices can be slow. AFter that it works smooth
 
 installation:
+- in calculator.py: type in your initial directory where your invoices are stored (just for easier access, you can also navigate there)
 - setup env
 - install used packages from calculator.py 
 - activate env

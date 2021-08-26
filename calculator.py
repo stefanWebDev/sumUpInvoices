@@ -9,6 +9,10 @@ import re
 class App1:
     def __init__(self, top):
         self.top = top
+
+
+        self.initialdir = "C:/users/me"
+
         top.title("Invoice Calculator")
         top.geometry("1028x500")
         top.configure(background="#091833")
@@ -28,7 +32,7 @@ class App1:
 
     def uploadFiles(self):
         invoiceAmounts = []
-        fileNames = filedialog.askopenfilenames(initialdir="C:/Users/Anus/Desktop/wichtig/programming/pythonTestGround/GUI/testRechnungen", title="Select A File", filetypes=(("pdf files", "*.pdf"),("all files", "*.*")))
+        fileNames = filedialog.askopenfilenames(initialdir=self.initialdir, title="Select A File", filetypes=(("pdf files", "*.pdf"),("all files", "*.*")))
         for file in fileNames:
             raw = parser.from_file(file)
             content = raw['content']
